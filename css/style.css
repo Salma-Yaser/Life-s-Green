@@ -1,0 +1,402 @@
+/* General Style */
+html,
+body {
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header style */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  transition: 0.5s linear;
+  background-color: #027a5f;
+  position: fixed;
+}
+
+header.sticky {
+  padding: 5px 100px;
+  background: #027a5f;
+}
+
+
+.Logo {
+  position: relative;
+  left: 200px;
+
+}
+
+.Logo img {
+  width: 100px;
+
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 8px 16px;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  background-color: rgb(100, 189, 157);
+  border-radius: 0.2rem;
+  transition: 0.2s all linear;
+
+}
+.navbar span a{
+  font-weight: bold;
+  color: black;
+}
+
+.header-icons {
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  column-gap: 1.2rem;
+}
+
+.header-icons .bx {
+  color: white;
+}
+
+#menu-icon {
+  color: white;
+  font-size: 28px;
+  z-index: 100005;
+  display: none;
+
+}
+
+/* Search Box Style */
+.search-box {
+  text-align: right;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.search-box input {
+  padding: 8px 18px;
+  border: 1px solid #303030;
+  border-radius: 10px 15px;
+}
+
+.search-box button {
+
+  padding: 10px 30px;
+  border-radius: 10px 15px;
+  background: #027a5f;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin: 50px;
+}
+
+/* Content Style */
+.category {
+  padding: 15px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #303030;
+}
+
+.category:last-of-type {
+  border-bottom: none;
+}
+
+.category h1 {
+  font-size: 30px;
+}
+
+.category .articles {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.category .all-articles {
+  grid-template-columns: auto auto auto;
+}
+
+.category .articles .article .cover {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.category .articles .article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.category .articles .article:hover img {
+  transform: scale(1.03);
+}
+
+.category .title p {
+  color: #212326bf;
+  font-size: 14px;
+}
+
+.category .articles .desc {
+  color: #212326bf;
+  line-height: 25px;
+  height: 75px;
+  overflow: hidden;
+}
+
+.category .articles a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: green;
+  padding-left: 30px;
+  transition: all 0.3s ease;
+}
+
+.category .articles a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  background-color: #303030;
+  transition: all 0.3s ease;
+}
+
+.category .articles a:hover {
+  padding-left: 40px;
+}
+
+.category .articles a:hover::before {
+  width: 30px;
+}
+
+.category .view-all {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.category .view-all a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #027a5f;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 15px 100px;
+}
+
+/* About Page */
+.about {
+  color: #224229;
+}
+
+.about .intro {
+  position: relative;
+  height: 500px;
+}
+
+.about .intro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .intro .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about .intro .overlay h3 {
+  color: white;
+}
+
+.about .intro .overlay p {
+  color: white;
+  font-size: 33px;
+}
+
+.about .overview {
+  text-align: center;
+  padding: 50px;
+}
+
+.about .overview p {
+  width: 60%;
+  margin: auto;
+  line-height: 30px;
+}
+
+.about .details .info-block {
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.about .details .info-block .image {
+  width: 50%;
+  text-align: center;
+}
+
+.about .details .info-block .image img {
+  max-width: 500px;
+}
+
+.about .details .info-block .desc {
+  width: 50%;
+}
+
+.about .details .info-block .desc h2 {
+  font-weight: bold;
+}
+
+.about .details .info-block .desc p {
+  line-height: 30px;
+}
+
+.about .testimonials {
+  padding: 30px;
+  text-align: center;
+}
+
+.about .testimonials h1 {
+  font-size: 35px;
+}
+
+.about .testimonials .quotes {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.about .testimonials .quotes p {
+  margin-bottom: 50px;
+}
+
+.about .testimonials .quotes a {
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 15px 50px;
+  border: 1px solid #224229;
+  color: #224229;
+  border-radius: 50px;
+}
+
+/* Article Page */
+.article-details {
+  padding: 30px;
+}
+
+.article-details .breadcrumb {
+  padding: 15px;
+  text-align: center;
+}
+
+.article-details .breadcrumb a {
+  text-decoration: none;
+  color: #212326;
+}
+
+.article-details .intro {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.article-details .intro img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.article-details .intro h1 {
+  font-size: 35px;
+  position: relative;
+  padding: 30px 0;
+}
+
+.article-details .intro h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 2px;
+  background-color: #303030;
+}
+
+.article-details .intro p {
+  color: #3e4042;
+}
+
+.article-details .contents-table {
+  padding: 50px;
+  background-color: #eff8f2;
+  width: 50%;
+  margin: auto;
+}
+
+.article-details .contents-table h1 {
+  margin-bottom: 50px;
+}
+
+.article-details .contents-table ul li {
+  margin: 30px 0;
+}
+
+.article-details .contents-table ul li a {
+  color: #212326;
+}
+
+.article-details .info-block h1,
+.article-details .info-block h3 {
+  font-weight: bold;
+}
+
+.article-details .info-block p {
+  color: #212326;
+  line-height: 30px;
+}
+
+.article-details .info-block img {
+  display: block;
+  margin: 50px auto;
+}
